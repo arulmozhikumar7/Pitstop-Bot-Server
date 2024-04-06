@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { Wit } = require("node-wit");
-const axios = require("axios");
 const cors = require("cors");
 require("dotenv").config();
 
