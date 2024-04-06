@@ -87,8 +87,6 @@ app.post("/process-message", async (req, res) => {
 
     const restaurants = findRestaurantsAlongRoute(startCity, endCity);
 
-    res.json({ restaurants });
-
     res.json({
       message:
         "Restaurant suggestions based on your query are as follows: 1. " +
