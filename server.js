@@ -89,6 +89,18 @@ app.post("/process-message", async (req, res) => {
 
     res.json({ restaurants });
 
+    res.json({
+      message:
+        "Restaurant suggestions based on your query are as follows: 1. " +
+        restaurants[0].name +
+        " which is located at " +
+        restaurants[0].location +
+        " and 2. " +
+        restaurants[1].name +
+        " which is located at " +
+        restaurants[1].location,
+    });
+
     console.log("Processed message:", req.body.message);
   } catch (error) {
     console.error("Error processing message:", error);
