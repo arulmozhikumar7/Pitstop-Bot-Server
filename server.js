@@ -88,6 +88,8 @@ app.post("/process-message", async (req, res) => {
     const restaurants = findRestaurantsAlongRoute(startCity, endCity);
 
     res.json({ restaurants });
+
+    console.log("Processed message:", req.body.message);
   } catch (error) {
     console.error("Error processing message:", error);
     res.status(500).json({ error: "Internal server error" });
